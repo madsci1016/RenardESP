@@ -4053,7 +4053,7 @@ LETTER landscape</description>
 <text x="91.44" y="93.98" size="1.778" layer="91">io2</text>
 <text x="91.44" y="91.44" size="1.778" layer="91">io0</text>
 <text x="91.44" y="88.9" size="1.778" layer="91">RX</text>
-<text x="208.026" y="-14.478" size="5.08" layer="94">D</text>
+<text x="207.772" y="-14.478" size="5.08" layer="94">C</text>
 </plain>
 <instances>
 <instance part="U$2" gate="G$1" x="81.28" y="91.44"/>

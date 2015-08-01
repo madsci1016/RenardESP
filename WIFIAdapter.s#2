@@ -4039,6 +4039,7 @@ LETTER landscape</description>
 <part name="JP5" library="SparkFun-Connectors" deviceset="M04" device="LOCK"/>
 <part name="JP6" library="SparkFun-Connectors" deviceset="M04" device="LOCK"/>
 <part name="JP7" library="SparkFun-Connectors" deviceset="M03" device="LOCK"/>
+<part name="SUPPLY6" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="D1" library="diode" deviceset="1N4148" device="DO35-7" value="1N4148"/>
 <part name="FRAME1" library="frames" deviceset="LETTER_L" device=""/>
 </parts>
@@ -4053,7 +4054,7 @@ LETTER landscape</description>
 <text x="91.44" y="93.98" size="1.778" layer="91">io2</text>
 <text x="91.44" y="91.44" size="1.778" layer="91">io0</text>
 <text x="91.44" y="88.9" size="1.778" layer="91">RX</text>
-<text x="208.026" y="-14.478" size="5.08" layer="94">D</text>
+<text x="207.772" y="-14.478" size="5.08" layer="94">C</text>
 </plain>
 <instances>
 <instance part="U$2" gate="G$1" x="81.28" y="91.44"/>
@@ -4083,6 +4084,7 @@ LETTER landscape</description>
 <instance part="JP5" gate="G$1" x="7.62" y="30.48" rot="MR0"/>
 <instance part="JP6" gate="G$1" x="22.86" y="33.02" rot="MR180"/>
 <instance part="JP7" gate="G$1" x="127" y="91.44" rot="R180"/>
+<instance part="SUPPLY6" gate="G$1" x="114.3" y="88.9" rot="R180"/>
 <instance part="D1" gate="G$1" x="68.58" y="81.28" rot="R180"/>
 <instance part="FRAME1" gate="G$1" x="-35.56" y="-20.32"/>
 <instance part="FRAME1" gate="G$2" x="111.76" y="-20.32"/>
@@ -4114,10 +4116,14 @@ LETTER landscape</description>
 <net name="N$6" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="4"/>
-<wire x1="88.9" y1="93.98" x2="104.14" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="93.98" x2="104.14" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="JP7" gate="G$1" pin="3"/>
-<wire x1="104.14" y1="88.9" x2="119.38" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="93.98" x2="101.6" y2="93.98" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="6"/>
+<wire x1="88.9" y1="91.44" x2="119.38" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="JP7" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -4134,11 +4140,10 @@ LETTER landscape</description>
 <pinref part="U$2" gate="G$1" pin="2"/>
 <wire x1="88.9" y1="96.52" x2="101.6" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="101.6" y1="96.52" x2="116.84" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="96.52" x2="116.84" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="96.52" x2="119.38" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="96.52" x2="119.38" y2="93.98" width="0.1524" layer="91"/>
 <junction x="101.6" y="96.52"/>
-<pinref part="JP7" gate="G$1" pin="2"/>
-<wire x1="116.84" y1="91.44" x2="119.38" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="JP7" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="G$1" pin="GND"/>
@@ -4188,6 +4193,11 @@ LETTER landscape</description>
 <pinref part="D3" gate="G$1" pin="C"/>
 <pinref part="SUPPLY7" gate="G$1" pin="3.3V"/>
 <wire x1="81.28" y1="55.88" x2="99.06" y2="55.88" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="JP7" gate="G$1" pin="3"/>
+<pinref part="SUPPLY6" gate="G$1" pin="3.3V"/>
+<wire x1="114.3" y1="88.9" x2="119.38" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="5V" class="0">
@@ -4285,15 +4295,6 @@ LETTER landscape</description>
 <wire x1="88.9" y1="88.9" x2="101.6" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="81.28" x2="101.6" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="D1" gate="G$1" pin="A"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="6"/>
-<wire x1="88.9" y1="91.44" x2="111.76" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="91.44" x2="111.76" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="JP7" gate="G$1" pin="1"/>
-<wire x1="111.76" y1="93.98" x2="119.38" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
